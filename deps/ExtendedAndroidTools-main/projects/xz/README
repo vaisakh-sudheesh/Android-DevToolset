@@ -1,0 +1,13 @@
+XZ Utils
+XZ Utils is free general-purpose data compression software with a high compression ratio.
+
+license: public domain/LGPLv2.1
+license url: https://git.tukaani.org/?p=xz.git;a=blob;f=COPYING
+
+Default version: v5.2.5
+
+Building
+- XZ Utils builds without problems, however autogen runs into problems specific
+  to VirtualBox's file system for shared directories, so it needs to be run in a
+  temporary location.
+- We need to ensure built executables are position independent

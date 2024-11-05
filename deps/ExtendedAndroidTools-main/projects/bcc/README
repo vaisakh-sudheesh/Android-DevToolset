@@ -1,0 +1,16 @@
+BPF Compiler Collection (BCC)
+Toolkit for creating BPF based tracing tools.
+
+github: https://github.com/iovisor/bcc
+license: Apache 2.0
+license url: https://github.com/iovisor/bcc/blob/master/LICENSE.txt
+
+Default version: v0.29.1
+
+Building:
+- bcc depends on flex binary, which needs to stay in sync with flex header
+  and library we built for Android (using host flex won't work). We build
+  flex for host from the same sources as we do for android and we override
+  the binary used by cmake with -DFLEX_EXECUTABLE
+- bps is linked against librt, which on Android is not available and instead
+  librt functions are provided by bionic
